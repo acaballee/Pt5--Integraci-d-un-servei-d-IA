@@ -41,7 +41,6 @@ class GeminiStrategy extends AIStrategy {
     final data = jsonDecode(response.body);
     final content = data['candidates'][0]['content']['parts'][0]['text'] as String;
 
-    // Netegem el possible markdown del JSON
     final jsonMatch = RegExp(r'\{[\s\S]*\}').firstMatch(content);
     if (jsonMatch == null) {
       throw Exception("No s'ha pogut extreure JSON de la resposta de Gemini.");

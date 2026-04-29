@@ -90,7 +90,6 @@ class _HomeScreenState extends State<HomeScreen>
     });
 
     try {
-      // Aplicar patró Strategy
       if (_selectedProvider == 'gemini') {
         _aiContext.setStrategy(GeminiStrategy(ApiKeys.geminiKey));
       } else {
